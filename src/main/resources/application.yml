@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: forknow
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/forknow?currentSchema=public
+    username: postgres
+    password: postgres
+  jpa:
+    show-sql: true
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: create
+  
