@@ -43,11 +43,11 @@ return http.authorizeHttpRequests((auth) -> {
                 .requestMatchers("/css/**", "/favicon.ico").permitAll() // Ressources statiques accessibles à tous
                 .requestMatchers("/images/**").permitAll(); // permettre l'affichage des images pour tous
     }).formLogin(login -> login
-            // .loginPage("/login") // Définir la page de login personnalisée si nécessaire
-            .defaultSuccessUrl("/") // Redirige vers la page d'accueil après une authentification réussie
+            .loginPage("/login") // Définir la page de login personnalisée si nécessaire
+            .defaultSuccessUrl("/restaurant-list", true) // Redirige vers la page des restaurants après une authentification réussie
             .permitAll())
     .logout(logout -> logout
-            .logoutSuccessUrl("/login?success=loggedOut") // Redirige vers la page de login après une déconnexion
+            .logoutSuccessUrl("/") // Redirige vers la page de login après une déconnexion
             .permitAll())
     .build();
     }

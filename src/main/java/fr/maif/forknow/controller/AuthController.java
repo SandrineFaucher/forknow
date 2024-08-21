@@ -38,6 +38,11 @@ public class AuthController {
         return "admin";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
     @GetMapping("/register")
     public String register(Model model) {
         RegisterDto user = new RegisterDto();

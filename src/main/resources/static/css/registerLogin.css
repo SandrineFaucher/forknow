@@ -1,0 +1,14 @@
+body{
+    background-color: #fd9b3a;
+}
+
+.form-box{
+    display: flex;
+    flex-direction: column;
+    background-color: #e4b98f;
+    
+}
+
+input{
+    border-radius: 20px ;
+}

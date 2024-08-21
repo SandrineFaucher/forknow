@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/registerLogin.css">
     <title>Register</title>
   </head>
   <body>
     <h1>Formulaire d'enregistrement</h1>
 
+    <div class="form-box">
     <form
       th:action="@{/register/save}"
       action="/register/save"
@@ -64,5 +66,6 @@
         >Already have an account ? login here</a
       >
     </form>
+    </div>
   </body>
 </html>
