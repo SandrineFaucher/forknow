@@ -3,13 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/registerLogin.css">
+    <link rel="stylesheet" href="/css/formulaires.css">
     <title>Register</title>
   </head>
   <body>
-    <h1>Formulaire d'enregistrement</h1>
+    
 
-    <div class="form-box">
+    <h1>Register</h1>
+
+    <div class="container">
     <form
       th:action="@{/register/save}"
       action="/register/save"
@@ -61,11 +63,11 @@
         th:field="*{passwordConfirm}"
       />
 
-      <input type="submit" value="register" />
-      <a th:href="@{/login}" href="/login"
+      <button type="submit" value="register" >Register</button>
+    </form>
+    <a th:href="@{/login}" href="/login"
         >Already have an account ? login here</a
       >
-    </form>
     </div>
   </body>
 </html>

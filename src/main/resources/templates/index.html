@@ -17,7 +17,7 @@
         <nav>
           <form th:if="${currentUser}" th:action="@{/logout}" method="post">
             <button type="submit">Logout</button>
-        </form>
+          </form>
           
           <a th:href="@{/login}" href="/login.html">Login/Register</a>
         </nav>
@@ -34,7 +34,8 @@
           <a th:href="@{/restaurant-list}" href="/restaurant-list.html"
             ><button class="cta-button">Order Now</button></a
           ></div>
-        </div>
+          </div>
+          <p th:unless="${user}">You must log in to order</p>
         <div class="hero-image">
           <img
             src="/images/ForkNow_hero.png"

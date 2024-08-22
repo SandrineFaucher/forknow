@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/formulaires.css">
+    <title>Formulaire-restaurant</title>
+</head>
+<body>
+
+    <h1>Create your Shop</h1>
+
+    <div class="container">
+
+        <form th:action="@{/restaurant}" method="post" th:object="${shop}">
+        <div>
+            <label for="name">Name of your Shop</label>
+            <input type="text" id="name" name="name" th:field="*{name}" required />
+        </div>
+        <div>
+            <label for="type">Type of your Shop</label>
+            <input type="text" id="type" name="type" th:field="*{type}" required />
+        </div>
+                
+            <button type="submit">Valider</button>
+        
+    </form>
+    </div>
+      
+    
+</body>
+</html>

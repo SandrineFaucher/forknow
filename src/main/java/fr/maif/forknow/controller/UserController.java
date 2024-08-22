@@ -75,7 +75,7 @@ public class UserController {
 
     public void deleteUser(@PathVariable("userId") Long userId) {
         User user = userRepository.findById(userId)
-                .orElseThrow(() -> new ResourceAccessException("Product not found with id "));
+                .orElseThrow(() -> new ResourceAccessException("User not found with id "));
         userRepository.delete(user);
     }
 }
