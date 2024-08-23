@@ -9,13 +9,31 @@ body {
     background-color: #f5f5f5;
     color: #333;
 }
-
-.container {
+p{
+    font-weight: bold;
+    font-size: large;
+}
+button{
+    background-color: #9e9993;
+    border-radius: 3px;
+    margin: 7px;
+    padding: 5px;
+    color: #131212;
+    
+}
+#container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
-
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 header {
     background-color: #FD9B3A;
     padding: 20px 0;
@@ -58,18 +76,20 @@ h1 {
 }
 
 .restaurant-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px; 
+    padding: 20px 0; 
+    justify-content: space-between; /* Répartit l'espace libre entre les cartes */
 }
-
 .restaurant-card {
     background-color: #FFF;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
+    flex: 1 1 calc(33.333% - 30px);
+    min-width: 300px; 
 }
 
 .restaurant-card:hover {
@@ -123,4 +143,49 @@ h1 {
 
 .order-button:hover {
     background-color: #FF8C00;
+}
+
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+/* Style pour le bouton du profil */
+.profile-button {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Style pour le menu déroulant */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 100%; /* Positionne le menu sous le bouton */
+    left: 0;
+    border-radius: 5px;
+}
+
+/* Style pour les éléments du menu */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Affiche le menu lorsque le bouton est survolé */
+.profile-menu:hover .dropdown-content {
+    display: block;
 }

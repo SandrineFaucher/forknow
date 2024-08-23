@@ -15,9 +15,7 @@
           <div class="logo"></div>
         </a>
         <nav>
-          <form th:if="${currentUser}" th:action="@{/logout}" method="post">
-            <button type="submit">Logout</button>
-          </form>
+          
           
           <a th:href="@{/login}" href="/login.html">Login/Register</a>
         </nav>

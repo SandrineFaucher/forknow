@@ -17,6 +17,8 @@ public class ShopDto {
     @NotEmpty(message = "Type of shop must not be empty")
     private String type;
 
+    private String imageUrl;
+
    
 }
 

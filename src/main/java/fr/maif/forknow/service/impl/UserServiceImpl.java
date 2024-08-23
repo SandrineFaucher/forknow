@@ -69,4 +69,6 @@ public class UserServiceImpl implements UserService {
         UserDetails userDetails = (UserDetails)principal;
         return userRepository.findByUsername(userDetails.getUsername());
     }
+
+    
 }
