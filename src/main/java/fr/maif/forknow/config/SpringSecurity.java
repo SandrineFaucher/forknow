@@ -45,7 +45,7 @@ return http.authorizeHttpRequests((auth) -> {
                 .requestMatchers("/images/**").permitAll(); // permettre l'affichage des images pour tous
                 
     }).formLogin(login -> login
-            .loginPage("/login") // Définir la page de login personnalisée si nécessaire
+            .loginPage("/login") // Définir la page de login personnalisée si nécessaire (car elle est implicite dans springsecurity)
             .defaultSuccessUrl("/restaurant-list", true) // Redirige vers la page des restaurants après une authentification réussie
             .permitAll())
     .logout(logout -> logout

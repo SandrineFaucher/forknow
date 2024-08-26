@@ -49,7 +49,7 @@ public class ShopController {
             model.addAttribute("shops", shops);
         }
         for (Shop shop : shops) {
-            // Utilisez le service pour générer l'URL de l'image
+            // Utilise le service pour générer l'URL de l'image
             shop.setImageUrl(shopService.generateImageUrl(shop.getId()));
         }
         Optional <User> user = userService.from(authentication);
